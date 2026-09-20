@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "dagnele.network",
+  "name": "Network",
+  "version": "1.0.0",
+  "author": "Daniele Galdi",
+  "description": "Wi-Fi network controls with camera QR joining and a password visibility toggle.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Network",
+    "description": "Wi-Fi network controls with camera QR joining and a password visibility toggle.",
+    "category": "Network",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  },
+  "license": "MIT"
+}
