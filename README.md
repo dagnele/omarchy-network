@@ -2,7 +2,11 @@
 
 A network widget for the Omarchy Quickshell bar, by **Daniele Galdi** ([dagnele](https://github.com/dagnele)). Based on Omarchy's **Network** plugin, with camera QR joining and a password visibility toggle.
 
-![Wi-Fi QR detection preview](preview.png)
+| Password hidden | Password visible |
+| --- | --- |
+| <img src="preview.png" alt="Network panel with the Scan QR button and masked password beside the eye toggle" width="412"> | <img src="docs/password-visible.png" alt="Network panel after using the eye toggle to reveal an example password" width="412"> |
+
+**Scan QR** appears beside **Wi-Fi networks** while disconnected. Select a protected network to enter its password, then click the **eye** beside the field to show or hide what you type. The eye and Connect checkmark are disabled until you enter a password.
 
 ## Features
 
@@ -12,7 +16,11 @@ A network widget for the Omarchy Quickshell bar, by **Daniele Galdi** ([dagnele]
 - **Password visibility:** the password entry has an eye toggle, disabled when empty. Passwords start hidden and are hidden again on submission or dismissal.
 - Preserves the original network list, connection details, DNS and band controls, QR sharing, and speed-test actions.
 
-The preview uses a simulated detection state with no real camera image or credentials.
+### QR detection preview
+
+<img src="docs/qr-detection.png" alt="Camera scanner showing a green square and checkmark after recognizing a Wi-Fi QR code" width="420">
+
+Screenshots render the plugin's QML controls with example network details and a simulated QR detection state. They contain no real network names, credentials, or camera images.
 
 ## Requirements
 
@@ -27,8 +35,6 @@ omarchy pkg add python python-gobject libnm zbar qt6-multimedia qt6-multimedia-f
 A working webcam and NetworkManager-managed Wi-Fi adapter are required for QR joining. The retained network features also use Omarchy's bundled network/DNS commands, `nmcli`, and `wl-copy`. The QR-sharing and speed-test actions summon the installed `omarchy.wifiqr` and `omarchy.speedtest` plugins through public shell IPC.
 
 ## Install
-
-Once this repository is public:
 
 ```sh
 omarchy plugin add https://github.com/dagnele/omarchy-network.git
