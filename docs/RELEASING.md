@@ -17,7 +17,7 @@ Author: Daniele Galdi
 
 ## Publish the source
 
-The prepared project is local. Create the public GitHub repository only when ready to publish. Review the files and commit any further changes first. The initial release is already committed locally.
+The prepared project is local. Create the public GitHub repository only when ready to publish. Review the files and commit any further changes first. The initial release is already committed in the prepared local Git repository. If you extracted the ZIP instead, first run `git init -b main`, `git add .`, and `git commit -m "Prepare Network 1.0.0"`.
 
 ```sh
 gh repo create dagnele/omarchy-network --public --source=. --remote=origin --push
