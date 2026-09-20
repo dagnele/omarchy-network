@@ -41,7 +41,7 @@ To replace the built-in Network widget, disable `omarchy.network` after your new
 omarchy plugin disable omarchy.network
 ```
 
-If you already use a personal Network clone, disable that clone instead. Keep only one network widget enabled for normal use. Installation does not edit packaged Omarchy files or automatically replace an existing widget.
+If you already use a personal Network clone with another ID, disable that clone instead. If a legacy `dagnele.network` directory exists, back it up outside the plugin directory before installing this repository under the same ID. Keep only one network widget enabled for normal use. Installation does not edit packaged Omarchy files or automatically replace an existing widget.
 
 To try a local checkout before publication:
 
@@ -86,7 +86,7 @@ omarchy plugin enable omarchy.network --section right
 omarchy plugin remove dagnele.network
 ```
 
-If you used another personal network widget before, enable that widget instead. Removing the plugin does not delete NetworkManager connections saved when joining networks.
+If you used another personal network widget before, enable that widget instead. Removing the plugin does not delete NetworkManager connections saved when joining networks. If you added a shortcut for `dagnele.network`, restore its command to `omarchy.network` when removing this plugin.
 
 ## Data and permissions
 
